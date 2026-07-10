@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardumen de Peces - Simulación Boids 3D</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- Babylon.js CDN -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+</head>
+<body>
+    <!-- Consola de errores en pantalla para diagnóstico -->
+    <div id="error-console" style="display:none; position:fixed; top:10px; left:10px; right:10px; background:rgba(220,53,69,0.95); color:white; padding:15px; border-radius:8px; z-index:99999; font-family:monospace; max-height:200px; overflow-y:auto; font-size:12px; box-shadow:0 10px 30px rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.2);">
+        <h4 style="margin:0 0 8px 0; font-size:14px; font-weight:bold; border-bottom:1px solid rgba(255,255,255,0.3); padding-bottom:4px;">Error en el Script:</h4>
+    </div>
+    <script>
+        window.addEventListener('error', function(e) {
+            var consoleBox = document.getElementById('error-console');
+            if (consoleBox) {
+                consoleBox.style.display = 'block';
+                consoleBox.innerHTML += '<div style="margin-bottom:6px;">❌ ' + e.message + ' <br><span style="color:#ffccd5; font-size:11px;">en ' + e.filename.split('/').pop() + ':' + e.lineno + '</span></div>';
+            }
+        });
+    </script>
+
+    <!-- Canvas para renderizar la escena 3D -->
+    <canvas id="renderCanvas"></canvas>
+
+    <!-- Interfaz de Usuario flotante (Glassmorphism) -->
+    <div id="ui-container">
+        <!-- Botón para ocultar/mostrar el panel -->
+        <button id="toggle-menu-btn" title="Mostrar/Ocultar Controles">◀</button>
+        <div class="menu-content">
+            <header>
+            <h1>Océano Boids 3D</h1>
+            <p class="subtitle">Simulación de Cardumen Eficiente</p>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-label">Rendimiento:</span>
+                <span id="fps-counter" class="stat-value pulse">00 FPS</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Agentes:</span>
+                <span id="agent-counter" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <div class="control-section">
+            <h2>Física del Cardumen (Boids)</h2>
+            
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="w-coh">Cohesión (Atracción)</label>
+                    <span id="v-coh" class="value-display">0.6</span>
+                </div>
+                <input type="range" id="w-coh" min="0.0" max="3.0" step="0.1" value="0.6">
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="w-ali">Alineación (Dirección)</label>
+                    <span id="v-ali" class="value-display">1.0</span>
+                </div>
+                <input type="range" id="w-ali" min="0.0" max="3.0" step="0.1" value="1.0">
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="w-sep">Separación (Repulsión)</label>
+                    <span id="v-sep" class="value-display">2.2</span>
+                </div>
+                <input type="range" id="w-sep" min="0.0" max="3.0" step="0.1" value="2.2">
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="perception-rad">Radio de Percepción</label>
+                    <span id="v-perception" class="value-display">5.0</span>
+                </div>
+                <input type="range" id="perception-rad" min="2.0" max="15.0" step="0.5" value="5.0">
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="max-speed">Velocidad Máxima</label>
+                    <span id="v-speed" class="value-display">4.0</span>
+                </div>
+                <input type="range" id="max-speed" min="1.0" max="10.0" step="0.2" value="4.0">
+            </div>
+        </div>
+
+        <div class="control-section">
+            <h2>Render & Shaders</h2>
+            
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="fish-count">Cantidad de Peces</label>
+                    <span id="v-count" class="value-display">300</span>
+                </div>
+                <input type="range" id="fish-count" min="50" max="1000" step="50" value="300">
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="swim-amplitude">Amplitud de Nado (Wobble)</label>
+                    <span id="v-amplitude" class="value-display">0.20</span>
+                </div>
+                <input type="range" id="swim-amplitude" min="0.0" max="0.5" step="0.02" value="0.20">
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="swim-frequency">Frecuencia de Nado (Velocidad)</label>
+                    <span id="v-frequency" class="value-display">6.0</span>
+                </div>
+                <input type="range" id="swim-frequency" min="1.0" max="15.0" step="0.5" value="6.0">
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="shading-mode">Estilo de Sombreado</label>
+                    <span id="v-shading" class="value-display">Realista (Blinn-Phong)</span>
+                </div>
+                <input type="range" id="shading-mode" min="0" max="2" step="1" value="0">
+                <div class="range-labels">
+                    <span>Blinn-Phong</span>
+                    <span>Híbrido</span>
+                    <span>Cel-Shaded</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="slider-header">
+                    <label for="caustics-intensity">Intensidad de Cáusticas</label>
+                    <span id="v-caustics" class="value-display">0.5</span>
+                </div>
+                <input type="range" id="caustics-intensity" min="0.0" max="1.5" step="0.1" value="0.5">
+            </div>
+        </div>
+
+        <div class="control-section info-section">
+            <button id="reset-button">Reiniciar Cardumen</button>
+            <p class="credits">Arrastra el mouse para rotar la cámara y la rueda para hacer zoom.</p>
+        </div>
+        </div> <!-- Fin menu-content -->
+    </div> <!-- Fin ui-container -->
+
+    <!-- Script principal autocontenido -->
+    <script src="app.js"></script>
+</body>
+</html>
