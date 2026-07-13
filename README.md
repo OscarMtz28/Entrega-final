@@ -40,10 +40,9 @@ Hay dos métodos simples para abrir la aplicación:
     *   **Cáusticas Proyectadas**: El Fragment Shader calcula en tiempo real un efecto de ondas de luz cruzadas en movimiento basado en la posición global XZ del fragmento y el tiempo, proyectándolo sobre los peces y disipándose con la profundidad.
 *   **Iluminación Coherente con la Escena Base (T1)**:
     *   Una luz ambiente (`HemisphericLight`) azul profundo da consistencia al entorno marino.
-    *   Una luz direccional descendente simula la luz solar penetrando la superficie, la cual proyecta **sombras dinámicas** de los peces y las plantas sobre el suelo mediante un generador de sombras suavizado (`ShadowGenerator` con blur exponencial).
+    *   Una luz direccional descendente simula la luz solar penetrando la superficie, la cual proyecta **sombras dinámicas** de los peces mediante un generador de sombras suavizado (`ShadowGenerator` con blur exponencial).
 
 ### 4. Calidad Visual y Presentación [15%]
-*   **Fondo Marino Realista (Dunas 3D)**: El plano del lecho marino se deforma proceduralmente sumando ondas sinusoidales tridimensionales para generar montículos y colinas de arena. Se recalculan las normales para que la iluminación de las sombras y cáusticas siga la silueta del relieve.
 *   **Evitación Dinámica de Colisión**: Los peces calculan la altura de la duna arenosa directamente debajo de ellos en tiempo real y aplican una fuerza vertical hacia arriba para evitar encallar.
 *   **Efectos Extras**: Un emisor continuo de burbujas flotantes (`ParticleSystem` con textura circular procedural) añade dinamismo y vida al fondo del mar.
 
