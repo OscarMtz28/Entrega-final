@@ -1,6 +1,6 @@
 # Proyecto Final: Simulación de Cardumen de Peces (Boids 3D) con Babylon.js
 
-Este proyecto consiste en una simulación tridimensional premium y altamente eficiente de un cardumen de peces utilizando **Babylon.js** (WebGL). El proyecto integra y consolida los conocimientos adquiridos a lo largo del semestre, cumpliendo rigurosamente con los componentes evaluados en la entrega final.
+Este proyecto consiste en una simulación tridimensional premium y altamente eficiente de un cardumen de peces utilizando **Babylon.js** (WebGL). El proyecto integra y consolida los conocimientos adquiridos a lo largo del timestre, cumpliendo rigurosamente con los componentes evaluados en la entrega final.
 
 ---
 
@@ -14,7 +14,7 @@ Hay dos métodos simples para abrir la aplicación:
 
 ---
 
-## 📋 Justificación de Requisitos de la Entrega (`final.png`)
+## 📋 Justificación de Requisitos de la Entrega
 
 ### 1. Flocking Completo [30%]
 *   **Las Tres Reglas de Craig Reynolds**: Se han codificado con precisión física en la clase `BoidsSimulation` en `app.js`:
@@ -44,7 +44,6 @@ Hay dos métodos simples para abrir la aplicación:
 
 ### 4. Calidad Visual y Presentación [15%]
 *   **Fondo Marino Realista (Dunas 3D)**: El plano del lecho marino se deforma proceduralmente sumando ondas sinusoidales tridimensionales para generar montículos y colinas de arena. Se recalculan las normales para que la iluminación de las sombras y cáusticas siga la silueta del relieve.
-*   **Plantas Acuáticas (Algas)**: Se diseñó una hoja de alga procedural que se dispersa en clusters (grupos) orgánicos sobre el relieve de las dunas utilizando `ThinInstances`. Cuenta con su propio shader que balancea la punta de la planta con la corriente mientras mantiene la base fija en la arena ($y=0$), con un gradiente de verde oscuro (raíz) a verde lima traslúcido (puntas).
 *   **Evitación Dinámica de Colisión**: Los peces calculan la altura de la duna arenosa directamente debajo de ellos en tiempo real y aplican una fuerza vertical hacia arriba para evitar encallar.
 *   **Efectos Extras**: Un emisor continuo de burbujas flotantes (`ParticleSystem` con textura circular procedural) añade dinamismo y vida al fondo del mar.
 
