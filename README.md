@@ -4,7 +4,7 @@ Este proyecto consiste en una simulación tridimensional premium y altamente efi
 
 ---
 
-## 🚀 Cómo Ejecutar el Proyecto
+## Cómo Ejecutar el Proyecto
 
 El proyecto está diseñado bajo una arquitectura de script clásico autocontenido. **No requiere compiladores, empaquetadores (Vite/Webpack) ni dependencias complejas**, lo que previene cualquier error de seguridad de red (CORS).
 
@@ -14,7 +14,7 @@ Hay dos métodos simples para abrir la aplicación:
 
 ---
 
-## 📋 Justificación de Requisitos de la Entrega
+## Justificación de Requisitos de la Entrega
 
 ### 1. Flocking Completo [30%]
 *   **Las Tres Reglas de Craig Reynolds**: Se han codificado con precisión física en la clase `BoidsSimulation` en `app.js`:
