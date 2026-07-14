@@ -1,7 +1,7 @@
 PWD c:\Users\marti\Documents\Optativas\Entrega final\PDFs
 INPUT C:\Users\marti\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\marti\Documents\Optativas\Entrega final\PDFs\tags.tex
-OUTPUT tags.log
+INPUT c:\Users\marti\Documents\Optativas\Entrega final\PDFs\reporteProyecto.tex
+OUTPUT reporteProyecto.log
 INPUT C:\Program Files\MiKTeX\tex\latex\acmart\acmart.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\acmart\acmart.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\xkeyval\xkeyval.sty
@@ -161,7 +161,7 @@ INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm0900.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\cmap\t1.cmap
 INPUT C:\Program Files\MiKTeX\tex\latex\cmap\t1.cmap
-OUTPUT tags.pdf
+OUTPUT reporteProyecto.pdf
 INPUT C:\Program Files\MiKTeX\tex\latex\cmap\t1.cmap
 INPUT C:\Program Files\MiKTeX\tex\latex\libertine\libertine.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifxetex.sty
@@ -226,10 +226,10 @@ INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr9.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\tags.aux
-INPUT .\tags.aux
-INPUT tags.aux
-OUTPUT tags.aux
+INPUT .\reporteProyecto.aux
+INPUT .\reporteProyecto.aux
+INPUT reporteProyecto.aux
+OUTPUT reporteProyecto.aux
 INPUT C:\Program Files\MiKTeX\tex\latex\newtx\omlnxlmi.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\newtx\omlnxlmi.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\newtx\omlnxlmi.fd
@@ -304,13 +304,13 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT .\tags.out
-INPUT .\tags.out
-INPUT tags.out
-INPUT tags.out
-INPUT .\tags.out
-INPUT .\tags.out
-OUTPUT tags.out
+INPUT .\reporteProyecto.out
+INPUT .\reporteProyecto.out
+INPUT reporteProyecto.out
+INPUT reporteProyecto.out
+INPUT .\reporteProyecto.out
+INPUT .\reporteProyecto.out
+OUTPUT reporteProyecto.out
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -394,9 +394,9 @@ INPUT C:\Users\marti\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
-INPUT tags.aux
-INPUT .\tags.out
-INPUT .\tags.out
+INPUT reporteProyecto.aux
+INPUT .\reporteProyecto.out
+INPUT .\reporteProyecto.out
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmb10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmb10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr7.pfb

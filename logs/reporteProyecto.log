@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.25)  13 JUL 2026 19:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.25)  13 JUL 2026 19:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/marti/Documents/Optativas/Entrega final/PDFs/tags.tex"
-(c:/Users/marti/Documents/Optativas/Entrega final/PDFs/tags.tex
+**"c:/Users/marti/Documents/Optativas/Entrega final/PDFs/reporteProyecto.tex"
+(c:/Users/marti/Documents/Optativas/Entrega final/PDFs/reporteProyecto.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
 (C:\Program Files\MiKTeX\tex/latex/acmart\acmart.cls
@@ -651,8 +651,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count335
-) (tags.aux)
-\openout1 = `tags.aux'.
+) (reporteProyecto.aux)
+\openout1 = `reporteProyecto.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 16.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line 16.
@@ -774,9 +774,9 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 Package hyperref Info: Link coloring OFF on input line 16.
- (tags.out) (tags.out)
+ (reporteProyecto.out) (reporteProyecto.out)
 \@outlinefile=\write4
-\openout4 = `tags.out'.
+\openout4 = `reporteProyecto.out'.
 
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -940,24 +940,24 @@ File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 ) [1.1{C:/Users/marti/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
 
-{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] (tags.aux)
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] (reporteProyecto.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-Package rerunfilecheck Info: File `tags.out' has not changed.
+Package rerunfilecheck Info: File `reporteProyecto.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  21058 strings out of 468130
- 333074 string characters out of 5440700
- 832943 words of memory out of 5000000
+ 333294 string characters out of 5440700
+ 833033 words of memory out of 5000000
  48991 multiletter control sequences out of 15000+600000
  708358 words of font info for 170 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,11n,131p,1057b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,131p,1068b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmb10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on tags.pdf (1 page, 254269 bytes).
+Output written on reporteProyecto.pdf (1 page, 254280 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  6 named destinations out of 1000 (max. 500000)

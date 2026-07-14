@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1783993937.7742 "c:/Users/marti/Documents/Optativas/Entrega final/PDFs/tags.tex" "tags.pdf" "tags" 1783993939.18016 0
+["pdflatex"] 1783994020.84402 "c:/Users/marti/Documents/Optativas/Entrega final/PDFs/reporteProyecto.tex" "reporteProyecto.pdf" "reporteProyecto" 1783994022.1722 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc" 1256929440 2840 216e6e45ad352e2456e1149f28885bee ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc" 1256929440 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
@@ -180,13 +180,13 @@
   "C:/Program Files/MiKTeX/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "C:/Users/marti/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758819176 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/marti/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758819195 13276899 4edd86fb6e50bac0415919fecee753f0 ""
-  "c:/Users/marti/Documents/Optativas/Entrega final/PDFs/tags.tex" 1783993937 3819 23d36a15876b6eec390f809a21ebb33a ""
-  "tags.aux" 1783993938 392 544eae1098b015554c9bcba0a23ab797 "pdflatex"
-  "tags.out" 1783993938 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tags.tex" 1783993937 3819 23d36a15876b6eec390f809a21ebb33a ""
+  "c:/Users/marti/Documents/Optativas/Entrega final/PDFs/reporteProyecto.tex" 1783993937 3819 23d36a15876b6eec390f809a21ebb33a ""
+  "reporteProyecto.aux" 1783994021 392 544eae1098b015554c9bcba0a23ab797 "pdflatex"
+  "reporteProyecto.out" 1783994021 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "reporteProyecto.tex" 1783993937 3819 23d36a15876b6eec390f809a21ebb33a ""
   (generated)
-  "tags.aux"
-  "tags.log"
-  "tags.out"
-  "tags.pdf"
+  "reporteProyecto.aux"
+  "reporteProyecto.log"
+  "reporteProyecto.out"
+  "reporteProyecto.pdf"
   (rewritten before read)
