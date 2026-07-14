@@ -1,0 +1,66 @@
+\documentclass[acmtog]{acmart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+\acmJournal{JDS}
+\acmVolume{1}
+\acmNumber{1}
+\acmArticle{1}
+\acmMonth{7}
+
+
+\begin{document}
+\title{Peces Babylon}
+\author{Oscar Martinez Barrales}
+\email{oscar.martinez.b@cua.uam.mx}
+
+\author{Oswaldo Mejía García}
+\email{oswaldo.mejia@cua.uam.mx}
+
+\author{José A. Gonzales Rodríguez}
+\email{jose.gonzales.r@cua.uam.mx}
+\maketitle
+
+\section*{Objetivo}
+
+El propósito central de este proyecto fue desarrollar una simulación en 3D de un
+cardumen utilizando el algoritmo Boids y Babylon.js, aplicando técnicas modernas de
+computación gráfica para generar un comportamiento natural y un alto rendimiento en
+tiempo real.
+
+\section*{Justificación}
+
+Un cardumen de peces representa uno de los ejemplos más complejos visualmente para implementar el algoritmo Boids. En la naturaleza, miles de peces se mueven de manera coordinada sin un líder central, sin comunicación explícita y sin un plan global. Este fenómeno de comportamiento emergente es exactamente lo que se busca replicar
+computacionalmente.
+
+\begin{itemize}
+    \item \textbf{Comportamiento emergente}: Las reglas locales simples generan patrones globales complejos y orgánicos, ideales para demostrar el poder del algoritmo.
+    \item \textbf{Interacción entre agentes}: Cada pez interactúa únicamente con sus vecinos más cercanos, lo que permite evaluar la eficiencia de estructuras espaciales como el Spatial Hashing.
+    \item \textbf{Movimiento natural}: El entorno acuático tridimensional permite explorar el movimiento en los tres ejes, añadiendo complejidad respecto a simulaciones 2D.
+    \item \textbf{Escenario visualmente atractivo}: El ambiente submarino ofrece oportunidades únicas para aplicar cáusticas, partículas, iluminación volumétrica y shaders personalizados.
+\end{itemize}
+\section*{Tecnologías}
+
+\begin{itemize}
+    \item \textbf{Babylon.js}: Después de un análisis para decidir entre Three.js y Babylon.js, se tomó la decisión de utilizar Babylon.js por su facilidad de uso y su amplia documentación.
+    \begin{itemize}
+        \item Contiene \texttt{Thin instances}, las cuales son ideales para el renderizado de cientos de peces utilizando una sola llamada de dibujo.
+        \item Excelente soporte para shaders personalizados, lo que nos permite animar a los peces directamente en la GPU.
+        \item Sistema de iluminación y sombras integrado.
+        \item Ofrece mayor facilidad para desarrollar simulaciones interactivas en WebGL.
+    \end{itemize}
+    \item \textbf{Boids}: Algoritmo utilizado para generar el comportamiento natural del cardumen.
+    \item \textbf{Spatial Hashing}: Estructura de datos utilizada para optimizar el rendimiento del algoritmo Boids, lo que permite encontrar los vecinos más cercanos de manera eficiente.
+    \item \textbf{Shaders GLSL}: Los movimientos de las aletas y la cola de los peces se calculan directamente en el Vertex Shader mediante funciones sinusoidales parametrizadas por el tiempo.
+\end{itemize}
+
+\section*{Conclusión}
+
+En conclusión, el proyecto permitió implementar con éxito una simulación de un cardumen mediante el algoritmo Boids, demostrando que reglas simples de comportamiento pueden generar movimientos naturales y realistas. Asimismo, el uso de Babylon.js facilitó el desarrollo de la escena y el aprovechamiento de técnicas de optimización, como Thin Instances y Shaders, garantizando un buen rendimiento incluso con múltiples elementos en pantalla. En conjunto, los resultados evidencian la importancia de integrar algoritmos de simulación con herramientas modernas de renderizado para desarrollar aplicaciones visualmente atractivas, eficientes y escalables.
+
+\end{document}
+\endinput
